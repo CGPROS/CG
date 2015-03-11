@@ -28,7 +28,11 @@ void paralelipipedo(float comp, float altura, float largura){
 void plano(float comp, float altura, float largura){
 
 
-    
+    if (outfile.is_open() && outfile.good()) //verificamos se está tudo bem
+    {
+        outfile << comp << "." << altura << "." << largura << endl;
+        outfile.close();
+    }
 
 }
 
@@ -47,39 +51,40 @@ void cone(float comp, float altura, float largura){
 
 int main(int argc, const char * argv[]) {
     
+ 
     
-    if(strcmp("paralelipipedo",argv[2])){
+    if((strcmp("paralelipipedo",argv[1]))==0){
         
         outfile.open("paralelipipedo.3d");
-        float x = atoi(argv[3]);
-        float y = atoi(argv[4]);
-        float z = atoi(argv[5]);
+        float x = atoi(argv[2]);
+        float y = atoi(argv[3]);
+        float z = atoi(argv[4]);
         paralelipipedo(x,y,z);
         
-    }else
+    }
     
-    if(strcmp("esfera",argv[2])){
+    if((strcmp("esfera",argv[1]))==0){
         
         outfile.open("esfera.3d");
-        float x = atoi(argv[3]);
-        float y = atoi(argv[4]);
-        float z = atoi(argv[5]);
+        float x = atoi(argv[2]);
+        float y = atoi(argv[3]);
+        float z = atoi(argv[4]);
         esfera(x,y,z);
         
-    }else
-    if(strcmp("cone",argv[2])){
+    }
+    if((strcmp("cone",argv[1]))==0){
         outfile.open("cone.3d");
-        float x = atoi(argv[3]);
-        float y = atoi(argv[4]);
-        float z = atoi(argv[5]);
+        float x = atoi(argv[2]);
+        float y = atoi(argv[3]);
+        float z = atoi(argv[4]);
         cone(x,y,z);
         
-    }else
-    if(strcmp("plano",argv[2])){
+    }
+    if((strcmp("plano",argv[1]))==0){
         outfile.open("plano.3d");
-        float x = atoi(argv[3]);
-        float y = atoi(argv[4]);
-        float z = atoi(argv[5]);
+        float x = atoi(argv[2]);
+        float y = atoi(argv[3]);
+        float z = atoi(argv[4]);
         plano(x,y,z);
         
     }
