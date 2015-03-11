@@ -16,7 +16,7 @@ void paralelipipedo(float comp, float altura, float largura){
     
    
    
-    if (outfile.is_open() && outfile.good()) //verificamos se está tudo bem
+    if (outfile.is_open() && outfile.good()) 
     {
         outfile << comp << "." << altura << "." << largura << endl;
         outfile.close();
@@ -28,17 +28,23 @@ void paralelipipedo(float comp, float altura, float largura){
 void plano(float comp, float altura, float largura){
 
 
-    if (outfile.is_open() && outfile.good()) //verificamos se está tudo bem
+    if (outfile.is_open() && outfile.good()) 
     {
         outfile << comp << "." << altura << "." << largura << endl;
         outfile.close();
     }
+    
 
 }
 
 
 void esfera(float comp, float altura, float largura){
  
+     if (outfile.is_open() && outfile.good()) 
+    {
+        outfile << comp << "." << altura << "." << largura << endl;
+        outfile.close();
+    }
     
 
 }
@@ -46,6 +52,11 @@ void esfera(float comp, float altura, float largura){
 
 void cone(float comp, float altura, float largura){
    
+     if (outfile.is_open() && outfile.good()) 
+    {
+        outfile << comp << "." << altura << "." << largura << endl;
+        outfile.close();
+    }
     
 }
 
