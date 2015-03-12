@@ -42,9 +42,9 @@ void plano(float comp, float altura, float largura){
         outfile.close();
         }
         if (comp==0){ //plano ZoY
-            outfile << comp << "," << -altura/2 << "," << largura/2 << endl;
+            outfile << comp << "," << -altura/2 << "," << -largura/2 << endl;
             outfile << comp << "." << altura/2 << "." << -largura/2 << endl;
-            outfile << comp << "." << -altura << "." << -largura/2 << endl;
+            outfile << comp << "." << -altura << "." << +largura/2 << endl;
                 //segundotriangulo
             outfile << comp << "," << -altura/2 << "," << largura/2 << endl;
             outfile << comp << "." << altura/2 << "." << -largura/2 << endl;
@@ -54,8 +54,8 @@ void plano(float comp, float altura, float largura){
         }
         if (largura==0){ //plano XoY
             outfile << -comp/2 << "," << -altura/2 << "," << largura << endl;
-            outfile << comp/2 << "." << altura/2 << "." << largura << endl;
             outfile << comp/2 << "." << -altura/2 << "." << largura << endl;
+            outfile << comp/2 << "." << altura/2 << "." << largura << endl;
                 //segundotriangulo
             outfile << -comp/2 << "," << -altura/2 << "," << largura << endl;
             outfile << comp/2 << "." << altura/2 << "." << largura << endl;
