@@ -31,9 +31,9 @@ void plano(float comp, float altura, float largura){
     if (outfile.is_open() && outfile.good()) //verificamos se está tudo bem
     {
         if (altura==0){ //plano ZoX
-        outfile << -comp/2 << "," << altura << "," << largura/2 << endl;
         outfile << comp/2 << "." << altura << "." << -largura/2 << endl;
         outfile << comp/2 << "." << altura << "." << largura/2 << endl;
+        outfile << -comp/2 << "," << altura << "," << largura/2 << endl;
             //segundo triangulo
         outfile << -comp/2 << "," << altura << "," << largura/2 << endl;
         outfile << comp/2 << "." << altura << "." << -largura/2 << endl;
