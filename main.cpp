@@ -9,8 +9,6 @@
 #include <iostream>
 #include "motor.h"
 #include <GL/glut.h>
-#include "camera_explorador.h"
-#include "camera_fps.h"
 
 //Inicializaçoes Principais
 TiXmlNode *cena=NULL;
@@ -132,20 +130,6 @@ void front_menu(int op){
         case 3:
             glPolygonMode(GL_FRONT,GL_FILL);
             break;
-        case 4:
-            glutKeyboardFunc(teclado_normal_explorador);
-            glutSpecialFunc(teclado_especial_explorador);
-            glutMouseFunc(rato_explorador);
-            glutMotionFunc(mov_rato_explorador);
-            tipo_camera=1;
-            break;
-        case 5:
-            glutKeyboardFunc(teclado_normal_fps);
-            glutSpecialFunc(teclado_especial_fps);
-            glutMouseFunc(rato_fps);
-            glutMotionFunc(mov_rato_fps);
-            tipo_camera=2;
-            break;
         default:
             break;
     }
@@ -185,8 +169,6 @@ int main(int argc, char* argv[]){
             
             glutKeyboardFunc(tecla_normal);
             glutSpecialFunc(tecla_especial);
-            glutMouseFunc(rato_explorador);
-            glutMotionFunc(mov_rato_explorador);
             
             
             
