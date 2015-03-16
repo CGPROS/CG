@@ -1,0 +1,2 @@
+
+int lerFicheiro(char* fich);
